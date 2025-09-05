@@ -1,0 +1,2482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issues and Action Plans Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plotly.com/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; margin: 20px; color: #000; font-size: 14px; }
+        h1 { color: #820ad1; text-align: center; }
+        h2 { color: #820ad1; margin-top: 40px; }
+        hr { border: 0; height: 1px; background-color: #e4e4e4; margin: 20px 0; }
+        .chart-container { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
+        .chart { width: 45%; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #820ad1; color: white; font-weight: bold; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #eef8ff; }
+        .dataTables_filter { margin-bottom: 20px; }
+        .filter-container { margin-bottom: 20px; }
+        .filter-container label { font-weight: bold; }
+        .footer { margin-top: 30px; font-size: 0.9em; color: #777; text-align: center; }
+        .highlight-red { background-color: #d00000 !important; color: white !important; font-weight: bold; }
+        .totalizer { text-align: center; margin-top: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Issues and Action Plans Management</h1>
+    <hr>
+    <div class="chart-container">
+        <div class="chart">
+            <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="57bac4dd-2f89-4feb-b157-cba79a716e33" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("57bac4dd-2f89-4feb-b157-cba79a716e33")) {                    Plotly.newPlot(                        "57bac4dd-2f89-4feb-b157-cba79a716e33",                        [{"customdata":[["Medium"],["Low"],["Low"],["Medium"],["Medium"],["Medium"],["Low"],["Low"],["Low"],["Low"],["Low"],["Low"],["Low"],["High"],["High"],["Low"],["Low"],["Low"],["Low"],["High"],["Low"],["Low"],["Low"],["Medium"],["Low"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"overall_risk_rating=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Medium","Low","Low","Medium","Medium","Medium","Low","Low","Low","Low","Low","Low","Low","High","High","Low","Low","Low","Low","High","Low","Low","Low","Medium","Low"],"legendgroup":"","marker":{"colors":["#aa68ffff","#e4e4e4","#e4e4e4","#aa68ffff","#aa68ffff","#aa68ffff","#e4e4e4","#e4e4e4","#e4e4e4","#e4e4e4","#e4e4e4","#e4e4e4","#e4e4e4","#d00000","#d00000","#e4e4e4","#e4e4e4","#e4e4e4","#e4e4e4","#d00000","#e4e4e4","#e4e4e4","#e4e4e4","#aa68ffff","#e4e4e4"]},"name":"","showlegend":true,"type":"pie","textinfo":"value"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"title":{"text":"Issues by Risk (Late Only)","x":0.5}},                        {"responsive": true}                    )                };                            </script>        </div>
+            <p class="totalizer">Total: 25</p>
+        </div>
+        <div class="chart">
+            <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="7082474b-47fe-4582-a11f-570ac2181e6e" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("7082474b-47fe-4582-a11f-570ac2181e6e")) {                    Plotly.newPlot(                        "7082474b-47fe-4582-a11f-570ac2181e6e",                        [{"customdata":[["Pending Validation (late)"],["Pending Validation (late)"],["Pending Approval (late)"],["Late"],["Pending Validation (late)"],["Pending Validation (late)"],["Pending Approval (late)"],["Pending Validation (late)"],["Pending Validation (late)"],["Pending Validation (late)"],["Pending Approval (late)"],["Pending Approval (late)"],["Pending Validation (late)"],["Pending Validation (late)"],["Pending Validation (late)"],["Pending Approval (late)"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"ap_status=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["Pending Validation (late)","Pending Validation (late)","Pending Approval (late)","Late","Pending Validation (late)","Pending Validation (late)","Pending Approval (late)","Pending Validation (late)","Pending Validation (late)","Pending Validation (late)","Pending Approval (late)","Pending Approval (late)","Pending Validation (late)","Pending Validation (late)","Pending Validation (late)","Pending Approval (late)"],"legendgroup":"","marker":{"colors":["#820ad1","#820ad1","#aa68ff","#d00000","#820ad1","#820ad1","#aa68ff","#820ad1","#820ad1","#820ad1","#aa68ff","#aa68ff","#820ad1","#820ad1","#820ad1","#aa68ff"]},"name":"","showlegend":true,"type":"pie","textinfo":"value"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"title":{"text":"Action Plans by Status (Late Only)","x":0.5}},                        {"responsive": true}                    )                };                            </script>        </div>
+            <p class="totalizer">Total: 16</p>
+        </div>
+    </div>
+    <hr>
+
+    <h2 style="color: #820ad1;">Issues</h2>
+    <div class="filter-container">
+        <label for="responsible-filter">Filter by Responsible:</label>
+        <select id="responsible-filter">
+            <option value="">All</option>
+            
+            <option value="Alice Sabino">Alice Sabino</option>
+            
+            <option value="Aline Moreira">Aline Moreira</option>
+            
+            <option value="Anderson Ledo">Anderson Ledo</option>
+            
+            <option value="Anita Martins">Anita Martins</option>
+            
+            <option value="Arthur Goes">Arthur Goes</option>
+            
+            <option value="Arthur Kamienski">Arthur Kamienski</option>
+            
+            <option value="Benjamin Snow">Benjamin Snow</option>
+            
+            <option value="Bianca Bernardo">Bianca Bernardo</option>
+            
+            <option value="Bruna Rabahie">Bruna Rabahie</option>
+            
+            <option value="Bruno Canato">Bruno Canato</option>
+            
+            <option value="Bruno Evaldt">Bruno Evaldt</option>
+            
+            <option value="Bruno Sbrana">Bruno Sbrana</option>
+            
+            <option value="Bryan Rodriguez">Bryan Rodriguez</option>
+            
+            <option value="Camila Olivieri">Camila Olivieri</option>
+            
+            <option value="Camila Passos">Camila Passos</option>
+            
+            <option value="Carolina Robledo Velini de Andrade">Carolina Robledo Velini de Andrade</option>
+            
+            <option value="Daniel Müller da Veiga">Daniel Müller da Veiga</option>
+            
+            <option value="Daniela Brioschi">Daniela Brioschi</option>
+            
+            <option value="Davi Correia">Davi Correia</option>
+            
+            <option value="Diego Lee">Diego Lee</option>
+            
+            <option value="Emanuela Amorim">Emanuela Amorim</option>
+            
+            <option value="Felipe Higa">Felipe Higa</option>
+            
+            <option value="Felipe Valencio">Felipe Valencio</option>
+            
+            <option value="Fernanda Patrao">Fernanda Patrao</option>
+            
+            <option value="Gabriella Bidurin">Gabriella Bidurin</option>
+            
+            <option value="Guilherme Lacerda">Guilherme Lacerda</option>
+            
+            <option value="Guilherme Matsumoto">Guilherme Matsumoto</option>
+            
+            <option value="Gustavo Araujo">Gustavo Araujo</option>
+            
+            <option value="Ingrid Sgulmar">Ingrid Sgulmar</option>
+            
+            <option value="Isabella Albernaz">Isabella Albernaz</option>
+            
+            <option value="Izabella Brito">Izabella Brito</option>
+            
+            <option value="Jessica Paul">Jessica Paul</option>
+            
+            <option value="Joao Almeida">Joao Almeida</option>
+            
+            <option value="Juanse">Juanse</option>
+            
+            <option value="Juliana Amado">Juliana Amado</option>
+            
+            <option value="Juliana Barros">Juliana Barros</option>
+            
+            <option value="Jurandir Pacheco">Jurandir Pacheco</option>
+            
+            <option value="Lais Takahashi">Lais Takahashi</option>
+            
+            <option value="Larissa Souza">Larissa Souza</option>
+            
+            <option value="Lourdes Pérez">Lourdes Pérez</option>
+            
+            <option value="Lucas Alquati">Lucas Alquati</option>
+            
+            <option value="Lucas Ferrari">Lucas Ferrari</option>
+            
+            <option value="Maite Balhester">Maite Balhester</option>
+            
+            <option value="Maria Costa">Maria Costa</option>
+            
+            <option value="Mariana Neukam">Mariana Neukam</option>
+            
+            <option value="Mariane Ohashi">Mariane Ohashi</option>
+            
+            <option value="Matheus Maia">Matheus Maia</option>
+            
+            <option value="Matt Santos">Matt Santos</option>
+            
+            <option value="Natalia Isepi">Natalia Isepi</option>
+            
+            <option value="Natalie Nascimento">Natalie Nascimento</option>
+            
+            <option value="Natália Oliveira">Natália Oliveira</option>
+            
+            <option value="Neon Vitor">Neon Vitor</option>
+            
+            <option value="Paola Malherbe Garcia">Paola Malherbe Garcia</option>
+            
+            <option value="Pedro de Souza Vieira Coelho">Pedro de Souza Vieira Coelho</option>
+            
+            <option value="Rafael Rodriguez">Rafael Rodriguez</option>
+            
+            <option value="Ramon Martinez">Ramon Martinez</option>
+            
+            <option value="Rawley Lopes">Rawley Lopes</option>
+            
+            <option value="Rayssa Fernandes">Rayssa Fernandes</option>
+            
+            <option value="Renata de Lima">Renata de Lima</option>
+            
+            <option value="Santiago Matamoros">Santiago Matamoros</option>
+            
+            <option value="Tiago Sammarco">Tiago Sammarco</option>
+            
+        </select>
+    </div>
+    <table id="issues-table" class="display">
+        <thead>
+            <tr>
+                
+                <th>code</th>
+                
+                <th>status</th>
+                
+                <th>summary</th>
+                
+                <th>reporter_name</th>
+                
+                <th>responsible_email</th>
+                
+                <th>overall_risk_rating</th>
+                
+                <th>responsible_name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I008218" target="_blank">I008218</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Risk of judicial seize of the asset because of judicial orders
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Erica Lanes
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    matheus.santos@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    High
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Matt Santos
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I010354" target="_blank">I010354</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    SPEI CLABE for each loan originated
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Karla Ximena Diaz Peña
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    lourdes.perez@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    High
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Lourdes Pérez
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I010756" target="_blank">I010756</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    [MX IT Risk] Possibility of inadequate functionality due to lack of user acceptance testing
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Luis Paes
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    lourdes.perez@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    High
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Lourdes Pérez
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I007380" target="_blank">I007380</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Finding #1 - Deficiencies in the portability out process - Payroll Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Luis Ricardo Ho
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    ingrid.sgulmar@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Medium
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Ingrid Sgulmar
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/C006152" target="_blank">C006152</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Finding #1 - Failures in controls related to the timely and accurate issuance of account statements
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Maiza Carvalho
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    benjamin.snow@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Medium
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Benjamin Snow
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I008769" target="_blank">I008769</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Accounting Treatment
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Beatriz Facchini
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    aline.moreira@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Medium
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Aline Moreira
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I009637" target="_blank">I009637</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Elevated Cash-Out Fraud Risks via Digital Payment Channels (Medium)
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Amanda Coelho
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    alice.sabino@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Medium
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Alice Sabino
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/C002121" target="_blank">C002121</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    [Reg Compliance] Execution of the guarantee
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Luiza Reis
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    camila.passos@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Medium
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Camila Passos
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006973" target="_blank">I006973</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2022-Q2 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006972" target="_blank">I006972</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2022-Q1 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006976" target="_blank">I006976</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2023-Q1 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/C002122" target="_blank">C002122</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    [Reg Compliance] Guarantee Registration
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Luiza Reis
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    camila.passos@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Camila Passos
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006980" target="_blank">I006980</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2024-Q1 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006975" target="_blank">I006975</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2022-Q4 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006981" target="_blank">I006981</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2024-Q2 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006977" target="_blank">I006977</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2023-Q2 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I009785" target="_blank">I009785</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Physical signature block affected Port-In with with Top-Up operations
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Gabriella Bidurin
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    gabriella.bidurin@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Gabriella Bidurin
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I009590" target="_blank">I009590</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    [Fraud] Risk of Scams to Pay Lending via Pix QR Code, Even from Other Institutions
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Ricardo Oliva
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    lais.takahashi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Lais Takahashi
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006982" target="_blank">I006982</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2024-Q4 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/C002260" target="_blank">C002260</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Transparency with the customer 
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Luiza Reis
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    camila.passos@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Camila Passos
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I008101" target="_blank">I008101</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Accounting Treatment
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Nicolas Cardeira
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    juan.rangel@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Juanse
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I009640" target="_blank">I009640</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Inconsistencies identified in BDRO 2.0 Losses
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Ingrid Sgulmar
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    felipe.higa@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Felipe Higa
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006978" target="_blank">I006978</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2023-Q3 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I008303" target="_blank">I008303</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Credit Provisions
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Bruno Sbrana
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    camila.olivieri@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Camila Olivieri
+                    
+                </td>
+                
+            </tr>
+            
+            
+            <tr >
+                
+                <td>
+                    
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006974" target="_blank">I006974</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Reconciliation Breaks 2022-Q3 | Operational Loss Database BDRO
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Julia Sant Anna
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    renata.martinuzzi@nubank.com.br
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Low
+                    
+                </td>
+                
+                <td>
+                    
+                    
+                    Renata de Lima
+                    
+                </td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    <hr>
+
+    <h2 style="color: #820ad1;">Action Plans</h2>
+    <div class="filter-container">
+        <label for="assignee-filter">Filter by Assignee:</label>
+        <select id="assignee-filter">
+            <option value="">All</option>
+            
+            <option value="Alan Scoralick">Alan Scoralick</option>
+            
+            <option value="Alecsander Yamana">Alecsander Yamana</option>
+            
+            <option value="Aline Moreira">Aline Moreira</option>
+            
+            <option value="Amanda Silva">Amanda Silva</option>
+            
+            <option value="Anita Martins">Anita Martins</option>
+            
+            <option value="Antonio Moreno">Antonio Moreno</option>
+            
+            <option value="Arthur Goes">Arthur Goes</option>
+            
+            <option value="Arthur Kamienski">Arthur Kamienski</option>
+            
+            <option value="Bianca Bernardo">Bianca Bernardo</option>
+            
+            <option value="Bianca Souza">Bianca Souza</option>
+            
+            <option value="Bruna Rabahie">Bruna Rabahie</option>
+            
+            <option value="Bruno Almeida">Bruno Almeida</option>
+            
+            <option value="Bruno Evaldt">Bruno Evaldt</option>
+            
+            <option value="Camila Olivieri">Camila Olivieri</option>
+            
+            <option value="Camila Poplawski">Camila Poplawski</option>
+            
+            <option value="Danilo Buiatti">Danilo Buiatti</option>
+            
+            <option value="Delfina Blanco">Delfina Blanco</option>
+            
+            <option value="Diego Cezário">Diego Cezário</option>
+            
+            <option value="Diego Lee">Diego Lee</option>
+            
+            <option value="Dimitri Lameri">Dimitri Lameri</option>
+            
+            <option value="Edmar Rezende">Edmar Rezende</option>
+            
+            <option value="Emanuela Amorim">Emanuela Amorim</option>
+            
+            <option value="Emilio Gonzalez">Emilio Gonzalez</option>
+            
+            <option value="Felipe Higa">Felipe Higa</option>
+            
+            <option value="Fernando Pieracciani">Fernando Pieracciani</option>
+            
+            <option value="Gaulthier Berger">Gaulthier Berger</option>
+            
+            <option value="Guilherme Matsumoto">Guilherme Matsumoto</option>
+            
+            <option value="Gustavo Massuela">Gustavo Massuela</option>
+            
+            <option value="Ingrid Sgulmar">Ingrid Sgulmar</option>
+            
+            <option value="Isabella Albernaz">Isabella Albernaz</option>
+            
+            <option value="Izabella Brito">Izabella Brito</option>
+            
+            <option value="Jacqueline Asano">Jacqueline Asano</option>
+            
+            <option value="Janaina Varela">Janaina Varela</option>
+            
+            <option value="Jessica Paul">Jessica Paul</option>
+            
+            <option value="Juliana Amado">Juliana Amado</option>
+            
+            <option value="Julieta Miranda">Julieta Miranda</option>
+            
+            <option value="Jurandir Pacheco">Jurandir Pacheco</option>
+            
+            <option value="Lourdes Pérez">Lourdes Pérez</option>
+            
+            <option value="Maite Balhester">Maite Balhester</option>
+            
+            <option value="Maria Costa">Maria Costa</option>
+            
+            <option value="Mariana Neukam">Mariana Neukam</option>
+            
+            <option value="Mariana Sanches">Mariana Sanches</option>
+            
+            <option value="Matheus Missen">Matheus Missen</option>
+            
+            <option value="Matt Santos">Matt Santos</option>
+            
+            <option value="Michele Tabosa">Michele Tabosa</option>
+            
+            <option value="Paola Malherbe Garcia">Paola Malherbe Garcia</option>
+            
+            <option value="Pedro Molina">Pedro Molina</option>
+            
+            <option value="Rafael Rodriguez">Rafael Rodriguez</option>
+            
+            <option value="Ramon Martinez">Ramon Martinez</option>
+            
+            <option value="Rawley Lopes">Rawley Lopes</option>
+            
+            <option value="Raysa Ramos">Raysa Ramos</option>
+            
+            <option value="Rayssa Andrade">Rayssa Andrade</option>
+            
+            <option value="Rayssa Fernandes">Rayssa Fernandes</option>
+            
+            <option value="Renata de Lima">Renata de Lima</option>
+            
+            <option value="Tatiana Menezes">Tatiana Menezes</option>
+            
+            <option value="Victor Carozzi">Victor Carozzi</option>
+            
+            <option value="Ximena Salgado">Ximena Salgado</option>
+            
+            <option value="Zaher Hammoud">Zaher Hammoud</option>
+            
+        </select>
+    </div>
+    <table id="aps-table" class="display">
+        <thead>
+            <tr>
+                
+                <th>ap_code</th>
+                
+                <th>ap_summary</th>
+                
+                <th>ap_due_date_at</th>
+                
+                <th>ap_status</th>
+                
+                <th>ap_business_unit</th>
+                
+                <th>ap_assignee_name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006981/action-plan/AP007408" target="_blank">AP007408</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006976/action-plan/AP007413" target="_blank">AP007413</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I010346/action-plan/AP012334" target="_blank">AP012334</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Variable Late Interest Rate Policy
+                    
+                </td>
+                
+                <td>
+                    
+                    2026-03-07
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Paola Malherbe Garcia']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/C006152/action-plan/AP006362" target="_blank">AP006362</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Action Plan #1.1 - Review the issuance control with the inclusion of all eligible customers
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-01-31
+                    
+                </td>
+                
+                <td>
+                    
+                    Late
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Lourdes Pérez']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006974/action-plan/AP007415" target="_blank">AP007415</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006978/action-plan/AP007411" target="_blank">AP007411</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I011001/action-plan/AP013340" target="_blank">AP013340</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Serpro submmition of the request
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-08-22
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Camila Olivieri']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I010346/action-plan/AP012335" target="_blank">AP012335</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Debt Forgiveness of Late Interest
+                    
+                </td>
+                
+                <td>
+                    
+                    2026-03-31
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Paola Malherbe Garcia']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006977/action-plan/AP007412" target="_blank">AP007412</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006973/action-plan/AP007416" target="_blank">AP007416</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006980/action-plan/AP007409" target="_blank">AP007409</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I011140/action-plan/AP013448" target="_blank">AP013448</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    CXP project to implement accounting eng for counter party risk
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-11-28
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Fernando Pieracciani' 'Maria Costa']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I011127/action-plan/AP013418" target="_blank">AP013418</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Create controls and automations in the process
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-12-31
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Bruna Rabahie']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I010787/action-plan/AP013030" target="_blank">AP013030</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    CND API Integration
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-10-31
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Camila Olivieri']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I010578/action-plan/AP012713" target="_blank">AP012713</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Describe the impact flow
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-08-31
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Matt Santos']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006975/action-plan/AP007414" target="_blank">AP007414</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006982/action-plan/AP007407" target="_blank">AP007407</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I006972/action-plan/AP007417" target="_blank">AP007417</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Interest not being recognized as loss
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-06-23
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Validation (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Renata de Lima' 'Izabella Brito']
+                    
+                </td>
+                
+            </tr>
+            
+            <tr  class="highlight-red" >
+                
+                <td>
+                    
+                    <a href="https://backoffice.ist.nubank.world/projac/#/im/issues/I010787/action-plan/AP013033" target="_blank">AP013033</a>
+                    
+                </td>
+                
+                <td>
+                    
+                    Remediation of 153 Non-Compliant Loans
+                    
+                </td>
+                
+                <td>
+                    
+                    2025-11-30
+                    
+                </td>
+                
+                <td>
+                    
+                    Pending Approval (late)
+                    
+                </td>
+                
+                <td>
+                    
+                    Global Lending
+                    
+                </td>
+                
+                <td>
+                    
+                    ['Camila Olivieri']
+                    
+                </td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>This report was automatically generated by BigQuery.</p>
+        <p>Last updated: 28/08/2025 14:03:09</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var issuesTable = $('#issues-table').DataTable();
+            var apsTable = $('#aps-table').DataTable();
+
+            $('#responsible-filter').on('change', function() {
+                issuesTable.column(issuesTable.column(':contains("responsible_name")').index()).search(this.value).draw();
+            });
+
+            $('#assignee-filter').on('change', function() {
+                apsTable.column(apsTable.column(':contains("ap_assignee_name")').index()).search(this.value).draw();
+            });
+        });
+    </script>
+</body>
+</html>
